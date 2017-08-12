@@ -8,14 +8,50 @@ var wins = 0
 var losses = 0
 var counter = 0
 
+var targetNum = 50
 
 
+
+$("#goalNum").text(targetNum);
+
+
+//need variables to make numbers random
+var numOptions = [3, 5, 10, 11];
+var targetNumChg = numOptions[Math.round(Math.random())];
+
+
+//loops through, creating each crystal, depein
+for (i = 0; i < numOptions.length; i++) {
+	var imgCrystal = $("<img>");	
+	imgCrystal.addClass("crystal-image");
+	imgCrystal.attr("src", "assets/images/crystal.jpg");
+	//gives each crystal a value from array.
+	imgCrystal.attr("data-crystalvalue", numOptions[i]);
+	$(".crystalPics").append(imgCrystal);
+}
+
+
+
+
+//Click on crystal, get more points!
 $(".crystal-image").on("click", function() {
-	//Adding a counter
-	counter += 1;
+	
+	var crystalValue = ($(this).attr("data-crystalvalue"));
+	crystalValue = parseInt(crystalValue);
+
+
+	//Adding a counter, increasing by the crystal's value
+	counter += crystalValue;
     // Clicking the button triggers an alert message.
-    alert("You clicked a crystal!")
+    alert("Good click!")
     console.log(counter);
+    //If the counter increments up to the Target Number = You win!
+	if (targetNum === counter) {
+		console.log("Winner winner!");
+	} else if (counter >= targetNum) {
+      alert("You lost, try again!!");
+      counter = "";
+    }
 });
 
 
