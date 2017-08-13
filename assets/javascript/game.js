@@ -43,7 +43,6 @@ $(".crystal-image").on("click", function() {
 	//Adding a counter, increasing by the crystal's value
 	counter += crystalValue;
     // Clicking the button triggers an alert message.
-    alert("Good click!")
     console.log(counter);
     //If the counter increments up to the Target Number = You win!
 	if (targetNum === counter) {
@@ -53,6 +52,13 @@ $(".crystal-image").on("click", function() {
       counter = "";
     }
 });
+
+
+
+//Let's start updating the HTML when we click
+$(".crystal-image").on("click", function() {     
+    $("#myScoreNum").text(counter);
+      });
 
 
 
