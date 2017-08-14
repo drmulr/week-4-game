@@ -2,5 +2,10 @@
 	height: 100px;
 	margin-left: 10px;
 	margin-right: 10px;
+	width: 150px;
 
+}
+body {
+	background-image: url('../images/whitediamond.png');
+	background-repeat: repeat;
 }
