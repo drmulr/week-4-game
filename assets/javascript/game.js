@@ -11,8 +11,22 @@ $(document).ready(function() {
 	var targetNum = Math.floor(Math.random()*100+20);
 
 
-	//need variables to make crystal values random
-	var numOptions = [3, 5, 10, 11];
+	//This function helps create a random value for each crystal.
+	function getRandomNum(min, max) {
+    	return Math.random() * (max - min) + min;
+    }
+		var numOne = getRandomNum(1,10);
+		var numTwo = getRandomNum(6,10);
+		var numThree = getRandomNum(11,15);
+		var numFour = getRandomNum(16,20);
+
+console.log("numOne: " + numOne);
+console.log("numTwo: "+ numTwo);
+console.log("numThree: " + numThree);
+console.log("numFour: " + numFour);
+
+
+	var numOptions = [numOne, numTwo, numThree, numFour];
 
 	//Array of crystal images to choose from:
 	var imgArray = new Array(); 
@@ -24,7 +38,6 @@ $(document).ready(function() {
 		imgArray[5] = "assets/images/crystal.jpg";
 
 	var targetNumChg = numOptions[Math.round(Math.random())];
-
 
 	//After win/loss, this resets data:
 	function updateDataWinLose() {
@@ -39,9 +52,7 @@ $(document).ready(function() {
 	      	alert("You lost, try again.");
 	      	numLosses++;
 	      	counter = 0;
-	      	$("#losses").html("Losses: " + numLosses);
-	      	
-	      	
+	      	$("#losses").html("Losses: " + numLosses);	      	
 	    }
 	}
 
@@ -53,7 +64,6 @@ $(document).ready(function() {
 		//gives each crystal a value from above array.
 		imgCrystal.attr("data-crystalvalue", numOptions[i]); //MODIFY FOR RANDOM????
 		$(".crystalPics").append(imgCrystal);
-
 	}
 
 	//Click on crystal, get more points!
@@ -67,7 +77,6 @@ $(document).ready(function() {
 	    $("#myScoreNum").html(counter);
 	    $("#randNum").html("Random Number: " + targetNum);
 	    updateDataWinLose();
-
 
 	});
 	  
