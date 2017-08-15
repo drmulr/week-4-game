@@ -6,6 +6,13 @@
 
 }
 body {
-	background-image: url('../images/whitediamond.png');
+	background-image: url('../images/background.png');
 	background-repeat: repeat;
+}
+.gameNameStyle {
+	background: orange;
+	height: 2em;
+	padding: 20px;
+	color: white;
+
 }
