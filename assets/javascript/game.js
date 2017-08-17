@@ -12,10 +12,10 @@ $(document).ready(function() {
 	function getRandomNum(min, max) {
     	return Math.random() * (max - min) + min;
     }
-		var numOne = getRandomNum(1,5);
-		var numTwo = getRandomNum(5,10);
-		var numThree = getRandomNum(11,15);
-		var numFour = getRandomNum(13,20);
+		var numOne = getRandomNum(1,12);
+		var numTwo = getRandomNum(1,12);
+		var numThree = getRandomNum(1,12);
+		var numFour = getRandomNum(1,12);
 
 console.log("numOne: " + numOne);
 console.log("numTwo: "+ numTwo);
@@ -62,10 +62,10 @@ console.log("numFour: " + numFour);
 	function resetGame(){
 		counter = 0;
 		targetNum = Math.floor(Math.random()*100+20);
-		numOne = getRandomNum(1,5);
-		numTwo = getRandomNum(5,10);
-		numThree = getRandomNum(11,15);
-		numFour = getRandomNum(13,20);
+		numOne = getRandomNum(1,12);
+		numTwo = getRandomNum(1,12);
+		numThree = getRandomNum(1,12);
+		numFour = getRandomNum(1,12);
 	}
 
 	startGame();

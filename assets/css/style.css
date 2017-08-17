@@ -1,9 +1,13 @@
+.container {
+	margin: auto;
+}
+
 .crystal-image {
-	height: 125px;
-	margin-left: 10px;
-	margin-right: 10px;
-	width: 175px;
+	height: 100px;
+	margin: 10px;
+	width: 120px;
 	border: 1px;
+	
 
 }
 body {
