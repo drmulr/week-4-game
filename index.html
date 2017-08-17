@@ -4,46 +4,42 @@
 	<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
-	<script
-  src="https://code.jquery.com/jquery-3.2.1.min.js"
-  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-  crossorigin="anonymous"></script>
 	<title>Crystals Collector Game</title>
 
 </head>
 
 <body>
-<!-- Name of game right here, first container just to keep it separate -->
-<div class="container text-center">
-	<div class="row col-sm-4">
-		<h1 class="gameNameStyle">Crystals Collector!</h1>
+<!-- HEADER AREA -->
+<div class="container">
+	<div class="row col-sm-6 bg-danger gameNameStyle text-center jumbotron">
+		<h2>Crystals Collector!</h2>
 	</div>
-</div>
+</div>	
 
 
-
-<div class="container bg-info">
-	<div class="row table-bordered">
-		<div class="col-sm-12 col-lg-6 instructions text-info bg-warning" style="padding:10px"><p>You will be given a random number at the start of the game. <br> There are four crystals below. By clicking on a crystal, you will add a specific amount of points to your total score. <br> You win the game by matching your total score to the randomly generated number. <br> The value of each crystal is hidden from you until you click on it. <br> Each time the game starts, the values of each crystal will change. <br> Good luck!</p></div>
+<!-- MAIN CONTENT -->
+<div class="container">
+	<div class="row">
+		<div class="col-sm-12 col-lg-4 instructions text-info bg-warning pull-left" style="padding:10px"><p>You will be given a random number at the start of the game. <br> There are four crystals below. By clicking on a crystal, you will add a specific amount of points to your total score. <br> You win the game by matching your total score to the randomly generated number. <br> The value of each crystal is hidden from you until you click on it. <br> Each time the game starts, the values of each crystal will change. <br> Good luck!</p></div>
 	</div>
 
-	<div class="row bg-danger table-bordered">
-		<div class="col-sm-6 randomNumBox text-center">
+	<div class="row">
+		<div class="col-sm-4 randomNumBox">
 			<p class="h3" id="randNum">Random Number: 0</p>
 		</div>
-		<div class="col-sm-6 winLossBox">
-			<p class="h3 text-center" id="wins">Wins: 0</p>
-			<p class="h3 text-center" id="losses">Losses: 0</p>
+		<div class="col-sm-4 winLossBox">
+			<p class="h3" id="wins">Wins: 0</p>
+			<p class="h3" id="losses">Losses: 0</p>
 		</div>
 	</div>
 
-	<div class="row table-bordered text-center">
+	<div class="row">
 		<div class="crystalPics">
 			<!-- This is where the crystals go! -->
 		</div>
 	</div>
 
-	<div class="row bg-warning table-bordered">
+	<div class="row">
 		<div class="totalScoreBox">
 			<p class="score h3">Your Total Score: <span id="myScoreNum">0</span></p>
 		</div>
@@ -52,7 +48,8 @@
 	
 
 </div>	
-
-<script src="assets/javascript/game.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+	<script src="assets/javascript/game.js"></script>
 </body>
 </html>
