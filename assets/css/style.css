@@ -3,6 +3,7 @@
 	margin-left: 10px;
 	margin-right: 10px;
 	width: 175px;
+	border: 1px;
 
 }
 body {
@@ -11,10 +12,15 @@ body {
 }
 .gameNameStyle {
 	background: orange;
-	padding: 20px;
+	padding: 10px;
 	color: white;
+	margin-top: 10px;
 
 }
 .crystalPics {
 	padding: 10px;
+}
+
+.randNum {
+	background: green;
 }
